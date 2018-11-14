@@ -1,7 +1,7 @@
 WARNING
 =======
 
-I have not done Unity development in many years, and have no intention of updating or maintaining this package and am archiving the repo. Feel free to fork away. 
+This is based on https://github.com/cbaltzer/UnitySpeakerFix, I have update code to use on iOS 7.0 - 12.0 with Unity 2018 (Nov, 2018)
 
 ***
 
@@ -17,9 +17,9 @@ which include voice-chat.
 How-To
 ======
 
-Simply install the Unity package, and add a call to `iPhoneSpeaker.ForceToSpeaker()` 
-after you call `Microphone.Start()`. 
-
+Simply install the Unity package, 
+add a call to `iPhoneSpeaker.CheckiOSPrepare()` before you call `Microphone.Start()`. 
+add a call to `iPhoneSpeaker.ForceToSpeaker()` after you call `Microphone.End()`.
 
 Credit
 ======
