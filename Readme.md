@@ -19,7 +19,7 @@ How-To
 
 Simply install the Unity package, 
 add a call to `iPhoneSpeaker.CheckiOSPrepare()` before you call `Microphone.Start()`. 
-add a call to `iPhoneSpeaker.ForceToSpeaker()` after you call `Microphone.End()`.
+add a call to `iPhoneSpeaker.ForceToSpeaker()` before you call `audio.Play()`.
 
 Credit
 ======
