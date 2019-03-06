@@ -1,3 +1,6 @@
+Update
+Unity has add Force iOS Speakers in PlayerSetting, you would try this.
+
 WARNING
 =======
 
