@@ -4,7 +4,7 @@ Unity has add Force iOS Speakers in PlayerSetting, you would try this.
 WARNING
 =======
 
-This is based on https://github.com/cbaltzer/UnitySpeakerFix, I have update code to use on iOS 7.0 - 12.0 with Unity 2018 (Nov, 2018)
+This is based on https://github.com/10people/UnitySpeakerFix, I have update code to use on iOS 15.0 with Unity 2021.2.17f1 (Apr, 2022)
 
 ***
 

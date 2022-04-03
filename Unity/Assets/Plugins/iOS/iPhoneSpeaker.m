@@ -19,7 +19,7 @@ void _forceToSpeaker() {
     AVAudioSession *session = [AVAudioSession sharedInstance];
     
     NSError *setCategoryError = nil;
-    if (![session setCategory:AVAudioSessionCategoryPlayback
+    if (![session setCategory:AVAudioSessionCategoryPlayAndRecord
                   withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
                         error:&setCategoryError]) {
         // handle error
@@ -34,7 +34,11 @@ bool _headsetConnected() {
     
     AVAudioSessionRouteDescription* route = [[AVAudioSession sharedInstance] currentRoute];
     for (AVAudioSessionPortDescription* desc in [route outputs]) {
-        if ([[desc portType] isEqualToString:AVAudioSessionPortHeadphones])
+        if ([[desc portType] isEqualToString:AVAudioSessionPortHeadphones] ||
+            [[desc portType] isEqualToString:AVAudioSessionPortBluetoothA2DP] ||
+            [[desc portType] isEqualToString:AVAudioSessionPortBluetoothLE] ||
+            [[desc portType] isEqualToString:AVAudioSessionPortBluetoothHFP]
+            )
             return true;
     }
     return false;
